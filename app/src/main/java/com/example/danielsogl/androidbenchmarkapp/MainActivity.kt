@@ -21,5 +21,20 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnStorage.setOnClickListener {
+            val intent = Intent(this, StorageActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnViewStack.setOnClickListener {
+            val intent = Intent(this, ViewStackActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnChart.setOnClickListener {
+            val intent = Intent(this, StorageActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

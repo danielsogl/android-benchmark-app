@@ -8,6 +8,8 @@ import kotlinx.android.synthetic.main.activity_list_view.*
 
 class ListViewActivity : AppCompatActivity() {
 
+    private class Data(var id: Int, var label: String)
+
     private var listItems = ArrayList<Data>()
     var id: Int = 1
 
@@ -70,5 +72,3 @@ class ListViewActivity : AppCompatActivity() {
 
     private fun random(from: Int, to: Int) = (Math.random() * (to - from) + from).toInt()
 }
-
-class Data(var id: Int, var label: String)
