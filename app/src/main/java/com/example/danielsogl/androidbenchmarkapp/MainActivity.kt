@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnChart.setOnClickListener {
-            val intent = Intent(this, StorageActivity::class.java)
+            val intent = Intent(this, ChartActivity::class.java)
             startActivity(intent)
         }
 
