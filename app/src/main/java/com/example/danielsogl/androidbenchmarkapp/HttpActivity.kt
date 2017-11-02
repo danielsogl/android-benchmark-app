@@ -24,11 +24,11 @@ class HttpActivity : AppCompatActivity() {
             val startTime = System.currentTimeMillis()
             var counter = 0
 
-            for (i in 1..200) {
+            for (i in 1..100) {
 
                 "/comments".httpGet().responseString { request, response, result ->
                     counter++
-                    if (counter == 200) {
+                    if (counter == 100) {
                         val stopTime = System.currentTimeMillis()
                         val elapsedTime = stopTime - startTime
                         Log.d("Elapsed Time", elapsedTime.toString())
@@ -42,11 +42,11 @@ class HttpActivity : AppCompatActivity() {
             val startTime = System.currentTimeMillis()
             var counter = 0
 
-            for (i in 1..200) {
+            for (i in 1..100) {
 
                 ("/comments/").httpPost().body("{ \"id\" : \"1\", \"name\" : \"Lorem Ipsum\", \"email\" : \"test@mail.com\", \"body\" : \"laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium\" }").response { request, response, result ->
                     counter++
-                    if (counter == 200) {
+                    if (counter == 100) {
                         val stopTime = System.currentTimeMillis()
                         val elapsedTime = stopTime - startTime
                         Log.d("Elapsed Time", elapsedTime.toString())
@@ -59,11 +59,11 @@ class HttpActivity : AppCompatActivity() {
             val startTime = System.currentTimeMillis()
             var counter = 0
 
-            for (i in 1..200) {
+            for (i in 1..100) {
 
                 ("/comments/" + i.toString()).httpPut().body("{ \"id\" : \"1\", \"name\" : \"Lorem Ipsum\", \"email\" : \"test@mail.com\", \"body\" : \"laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium\" }").response { request, response, result ->
                     counter++
-                    if (counter == 200) {
+                    if (counter == 100) {
                         val stopTime = System.currentTimeMillis()
                         val elapsedTime = stopTime - startTime
                         Log.d("Elapsed Time", elapsedTime.toString())
@@ -76,11 +76,11 @@ class HttpActivity : AppCompatActivity() {
             val startTime = System.currentTimeMillis()
             var counter = 0
 
-            for (i in 1..500) {
+            for (i in 1..100) {
 
                 ("/comments/" + i.toString()).httpDelete().response { request, response, result ->
                     counter++
-                    if (counter == 500) {
+                    if (counter == 100) {
                         val stopTime = System.currentTimeMillis()
                         val elapsedTime = stopTime - startTime
                         Log.d("Elapsed Time", elapsedTime.toString())

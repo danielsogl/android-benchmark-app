@@ -14,6 +14,8 @@ import java.util.*
 
 class ChartActivity : AppCompatActivity() {
 
+    val valsComp1 = (0..1000).map { Entry(it.toFloat(), random(1, 100).toFloat()) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chart)
@@ -22,7 +24,7 @@ class ChartActivity : AppCompatActivity() {
         val chart = findViewById<LineChart>(R.id.chart)
 
         btnRenderChart.setOnClickListener {
-            val valsComp1 = (0..500).map { Entry(it.toFloat(), random(1, 100).toFloat()) }
+
 
             val setComp1 = LineDataSet(valsComp1, "Data")
             setComp1.axisDependency = AxisDependency.LEFT
